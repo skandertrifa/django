@@ -23,6 +23,14 @@
         <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
         <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' % %}">
+    	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
         {# Snipcart #}
         {% if settings.home.SnipcartSettings.api_key %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -38,7 +46,95 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+        <div class="site-wrap">
+        	<div class="site-navbar bg-white py-2">
 
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>  
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">ShopMax</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="has-children active">
+                  <a href="index.html">Home</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Menu One</a></li>
+                    <li><a href="#">Menu Two</a></li>
+                    <li><a href="#">Menu Three</a></li>
+                    <li class="has-children">
+                      <a href="#">Sub Menu</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Menu One</a></li>
+                        <li><a href="#">Menu Two</a></li>
+                        <li><a href="#">Menu Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="#" class="icons-btn d-inline-block"><span class="icon-heart-o"></span></a>
+            <a href="cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="site-blocks-cover aos-init aos-animate" data-aos="fade">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto order-md-2 align-self-start">
+            <div class="site-block-cover-content">
+            <h2 class="sub-title">#New Summer Collection 2019</h2>
+            <h1>Arrivals Sales</h1>
+            <p><a href="#" class="btn btn-black rounded-0">Shop Now</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-1 align-self-end">
+            <img src="{% static 'images/model_3.png'%}" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+        </div>	
         <div class="container grid-lg">
             <header class="navbar">
                 <section class="navbar-section">
@@ -48,7 +144,7 @@
                 </section>
                 <section class="navbar-section snipcart-summary">
                     <div class="input-group input-line">
-                        <a href="" class="btn btn-primary snipcart-checkout">
+                        <a href="" class="btn btn-primary snipcart-checkout" background="color:black;">
                             <i class="icon icon-apps"></i>
                             View cart (<span class="snipcart-total-items">0</span>)
                         </a>
@@ -64,12 +160,22 @@
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/snipcartwagtaildemo.js' %}"></script>
 
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  		<script src="{% static 'js/jquery-ui.js' %}"></script>
+  		<script src="{% static 'js/popper.min.js' %}"></script>
+  		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+  		<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  		<script src="{% static 'js/aos.js' %}"></script>
+		
+  		<script src="js/main.js"></script>
+
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
 
         <footer class="container grid-lg">
-            Made with <3 by <a href="https://snipcart.com">Snipcart</a>, the code for this demo is on <a href="https://github.com/snipcart/snipcart-wagtail-integration">Github</a> and the technical post is <a href="https://snipcart.com/blog/django-ecommerce-tutorial-wagtail-cms">here</a>.
+            Made with <3 by <a href="#">Skander</a>
         </footer>
     </body>
 </html>
